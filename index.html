@@ -39,7 +39,7 @@
         </div>
     </nav>
 
-    <!-- Page 1 -->
+    <!-- Page 1 Intro -->
     <div id="section1" class="section" style="background-image: url('img/section1-bg.jpg'); background-size: cover; background-position: center;">
         <div class="d-flex flex-column justify-content-center align-items-center h-100">
             <img src="img/self-portrait.jpg" alt="Center Image" 
@@ -89,11 +89,12 @@
         </div>
     </div>
 
-
-    <!-- Page 2 -->
+    <!-- Page 2  About me-->
     <div id="section2" class="section">
         <div class="container mt-1">
-            <h1 class="mb-1 text-center">About Me</h1>
+            <div style="text-align: center; padding-bottom: 2%; padding-top: 4%;">
+                <h1>About me</h1>
+            </div>
             
             <div class="row mb-1 align-items-center">
                 <div class="col-md-4 d-flex justify-content-center">
@@ -178,11 +179,9 @@
             </div>
         </div>
     </div>
-    
-    
 
-    <!-- Page 3 -->
-    <div id="section3" class="section bg-light text-dark d-flex flex-column align-items-center p-4"
+    <!-- Page 3  Education-->
+    <div id="section3" class="section"
             style="background-image: url('img/tud-bg.png'); border-radius: 0; ">
         <div class="container mt-0">
             <div class="d-flex justify-content-center">
@@ -363,7 +362,7 @@
         </script>
     </div>
     
-    <!-- Page 4 -->
+    <!-- Page 4  Work Experience-->
     <div id="section4" class="section">
         <div class="container">
             <h1 class="text-center mb-5">Work Experience</h1>
@@ -433,7 +432,7 @@
         </div>
     </div>
 
-    <!-- Page 5 -->
+    <!-- Page 5  Projects-->
     <div id="section5" class="section5">
         <div style="text-align: center; padding-bottom: 2%; padding-top: 4%;">
             <h1>Projects</h1>
@@ -480,7 +479,6 @@
             </div>
         </div>
         
-
         <script>
             document.getElementById("project-selector").addEventListener("change", function () {
                 const selectedValue = this.value;
@@ -497,7 +495,7 @@
         </script>
     </div>
 
-    <!-- Page 6 -->
+    <!-- Page 6  Skills-->
     <div id="section6" class="section6">
         <div class="container">
             <h1 style="text-align: center; padding-bottom: 3%; padding-top: 5%;">Skills</h1>
@@ -557,21 +555,20 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            // Enable Bootstrap Popovers
+            document.addEventListener('DOMContentLoaded', function () {
+                var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+                var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                    return new bootstrap.Popover(popoverTriggerEl);
+                });
+            });
+        </script>
     </div>
 
-    <script>
-        // Enable Bootstrap Popovers
-        document.addEventListener('DOMContentLoaded', function () {
-            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-                return new bootstrap.Popover(popoverTriggerEl);
-            });
-        });
-    </script>
-
-
-    <!-- Page 7 -->
-    <div id="section7" class="section bg-light text-dark d-flex flex-column justify-content-center align-items-center">
+    <!-- Page 7  Contact Me-->
+    <div id="section7" class="section text-dark d-flex flex-column justify-content-center align-items-center">
         <h2>Contact Me</h2>
         <p style="font-size: 1.1rem;"><small>Feel free to leave me a message</small></p> <!-- Smaller font size -->
         <form class="w-50">
@@ -616,29 +613,28 @@
             </a>
         </button>
         <p style="font-size: 1.2rem; color: rgba(0, 0, 0, 0.8);">Back to top</p>
-    </div>
 
-
-    <script>
-        function validateForm() 
-        {
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
-            if (!name || !email || !message) {
-                alert("Please fill out all fields.");
-                return false;
+        <script>
+            function validateForm() 
+            {
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+                if (!name || !email || !message) {
+                    alert("Please fill out all fields.");
+                    return false;
+                }
+                // send email after confirmation
+                sendEmail();
             }
-            // send email after confirmation
-            sendEmail();
-        }
-
-        function sendEmail() 
-        {
-            const emailModal = new bootstrap.Modal(document.getElementById('emailModal'));
-            
-            emailModal.show();
-        }
-    </script>
+    
+            function sendEmail() 
+            {
+                const emailModal = new bootstrap.Modal(document.getElementById('emailModal'));
+                
+                emailModal.show();
+            }
+        </script>
+    </div>
 </body>
 </html>
