@@ -89,25 +89,22 @@
         </div>
     </div>
 
+
     <!-- Page 2 -->
     <div id="section2" class="section">
         <div class="container mt-1">
             <h1 class="mb-1 text-center">About Me</h1>
             
             <div class="row mb-1 align-items-center">
-                <div class="col-md-4">
+                <div class="col-md-4 d-flex justify-content-center">
                     <img src="img/about-me.jpg" alt="Your Photo" class="img-fluid rounded-circle shadow-sm">
                 </div>
-                <div class="col-md-8 ">
-                    <p>
-                        My name is Ciaran Daly.
-                    <p>
-                        I am currently in my final year of college at TUD Tallaght doing a BSc in Computing with Software Development.
-                    </p>
+                <div class="col-md-8">
+                    <p>My name is Ciaran Daly.</p>
+                    <p>I am currently in my final year of college at TUD Tallaght doing a BSc in Computing with Software Development.</p>
                 </div>
-            </div>             
-    
-            <!-- Accordion and Carousel Side-by-Side -->
+            </div>                      
+
             <div class="row align-items-center" style="min-height: 300px;">
                 <!-- Accordion -->
                 <div class="col-md-7 col-lg-7" style="max-height: 300px; overflow-y: auto;">
@@ -141,7 +138,7 @@
                                     data-bs-parent="#aboutMeAccordion">
                                 <div class="accordion-body">
                                     <p>
-                                        I have worked across many different industires including hospitality, retail and in data centers
+                                        I have worked across many different industries including hospitality, retail, and in data centers.
                                     </p>
                                 </div>
                             </div>
@@ -150,7 +147,7 @@
                 </div>
             
                 <!-- Carousel -->
-                <div class="col-md-5 col-lg-5 px-4">
+                <div class="col-md-5 col-lg-5 px-4 d-none d-md-block">
                     <div id="secondImageCarousel" class="carousel slide" data-bs-ride="carousel" style="max-height: 350px; overflow: hidden;">
                         <button class="carousel-control-prev" type="button" data-bs-target="#secondImageCarousel" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -182,12 +179,13 @@
         </div>
     </div>
     
+    
 
     <!-- Page 3 -->
     <div id="section3" class="section bg-light text-dark d-flex flex-column align-items-center p-4"
             style="background-image: url('img/tud-bg.png'); border-radius: 0; ">
         <div class="container mt-0">
-            <div>
+            <div class="d-flex justify-content-center">
                 <h1 style="text-align: center" class=" text-center text-light font-weight-bold">Education</h1>
             </div>
             
@@ -451,7 +449,7 @@
                 </select>
             </div>
         
-            <div class="project-display card shadow p-3 mb-4" id="project1" style="display: block; width: 30rem; margin: auto; text-align: center;">
+            <div class="project-display card shadow p-3 mb-4" id="project1" style="display: block; width: 90%; margin: auto; text-align: center;">
                 <a href="https://github.com/Ciaran-Daly/TriviaAPI"  target="_blank" class="text-decoration-none" style="color: inherit;">
                     <img src="img/trivia-project.png" alt="Blazor Trivia App" class="card-img-top img-fluid" style="width: 90%; height: auto; margin: auto; border: #061B48 .05em solid;">
                 </a>
@@ -501,11 +499,8 @@
 
     <!-- Page 6 -->
     <div id="section6" class="section6">
-        <div style="text-align: center; padding-bottom: 3%; padding-top: 5%;">
-            <h1>Skills</h1>
-        </div>
-
         <div class="container">
+            <h1 style="text-align: center; padding-bottom: 3%; padding-top: 5%;">Skills</h1>
             <div class="row row-cols-2 row-cols-md-3 g-4">
                 <!-- C sharp -->
                 <div class="col text-center">
@@ -564,38 +559,37 @@
         </div>
     </div>
 
-
-
-<script>
-    // Enable Bootstrap Popovers
-    document.addEventListener('DOMContentLoaded', function () {
-        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-            return new bootstrap.Popover(popoverTriggerEl);
+    <script>
+        // Enable Bootstrap Popovers
+        document.addEventListener('DOMContentLoaded', function () {
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl);
+            });
         });
-    });
-</script>
+    </script>
 
 
     <!-- Page 7 -->
     <div id="section7" class="section bg-light text-dark d-flex flex-column justify-content-center align-items-center">
         <h2>Contact Me</h2>
-        <p><small>Feel free to leave me a message</small></p>
+        <p style="font-size: 1.1rem;"><small>Feel free to leave me a message</small></p> <!-- Smaller font size -->
         <form class="w-50">
             <div class="mb-1">
-                <label for="name" class="form-label">Name</label>
+                <label for="name" class="form-label" style="font-size: 0.875rem;">Name</label> <!-- Smaller font size -->
                 <input type="text" class="form-control" id="name" placeholder="Your Name">
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
+                <label for="email" class="form-label" style="font-size: 0.875rem;">Email</label> <!-- Smaller font size -->
                 <input type="email" class="form-control" id="email" placeholder="Your Email">
             </div>
             <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
+                <label for="message" class="form-label" style="font-size: 0.875rem;">Message</label> <!-- Smaller font size -->
                 <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
             </div>
             <button type="button" class="btn btn-primary w-100" onclick="validateForm()">Send</button>
         </form>
+
         <!-- modal to send email confirmation -->
         <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -618,11 +612,12 @@
                 style="border: 3px solid #061B48; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
                         transition: transform 0.3s ease; margin-top: 20px;">
             <a href="#">
-                <img src="img/arrow-up.svg" alt="About me" style="width: 30px; height: auto;">
+                <img src="img/arrow-up.svg" alt="About me" style="width: 25px; height: auto;">
             </a>
         </button>
-        <p style="font-size: 1.5rem; color: rgba(0, 0, 0, 0.8);">Back to top</p>
+        <p style="font-size: 1.2rem; color: rgba(0, 0, 0, 0.8);">Back to top</p>
     </div>
+
 
     <script>
         function validateForm() 

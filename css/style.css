@@ -65,7 +65,8 @@ a:hover img
 
 #section2 .rounded-circle 
     {
-        max-width: 300px;
+        justify-content: center;
+        width: 65%;
         object-fit: cover;
         border: #061B48 .2em solid;
     }
