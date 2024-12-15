@@ -1,32 +1,38 @@
 List of Bootstrap Components:
 
 Section 1 - Intro:
-  Button
+  Button,
   Image
   
 Section 2 - About me:
-  Image
-  Accordian
+
+  Image,
+  Accordian,
   Carousel
   
 Section 3 - Education:
-  Pagination
+
+  Pagination,
   Table
   
 Section 4 - Work Experience:
-  Image
-  Card
+
+  Image,
+  Card,
   Carousel
   
 Section 5 - Projects:
-  Image
-  Card
+
+  Image,
+  Card,
   Dropdown
   
 Section 6 - Skills:
-  Image
+
+  Image,
   Popovers
   
 Section 7 - Contact me:
-  Alert
+
+  Alert,
   Modal
